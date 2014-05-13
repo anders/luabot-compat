@@ -35,5 +35,7 @@ local history = {
 }
 
 _getHistory = function(n)
-  return unpack(history[n])
+  if history[n] then
+    return unpack(history[n])
+  end
 end
