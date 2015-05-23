@@ -1,3 +1,5 @@
+local load_ts = os.time()
+
 etc = {}
 etc.cmdchar = "'"
 etc.cmdprefix = etc.cmdchar
@@ -20,6 +22,8 @@ Input = {}
 
 Output = {}
 Output.maxLines = 4
+
+API = function() end
 
 _clown = function() end
 boost = function() end
@@ -70,9 +74,9 @@ worth = function()
 end
 
 local history = {
-  {"this is a message", "anders", os.time()},
-  {"i maek a typo", "anders", os.time() - 12},
-  {"good one fr8", "byte[]", os.time() - 24}
+  {"this is a message", "anders", load_ts},
+  {"i maek a typo", "anders", load_ts - 12},
+  {"good one fr8", "byte[]", load_ts - 24}
 }
 
 _getHistory = function(n)
